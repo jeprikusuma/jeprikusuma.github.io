@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&family=Pacifico&family=Passion+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  color: whitesmoke;
+  background-color: rgb(89, 89, 89);
+  font-size: 16px;
+}
+/* Nav style */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+header nav {
+  transition: background 0.2s;
+  padding: 1.2rem;
+  display: flex;
+}
+header nav ul {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header nav ul li {
+  width: 25%;
+  text-align: right;
+  list-style-type: none;
+}
+header nav .icon {
+  width: 50vw;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: rgb(89, 89, 89);
+}
+header nav a:hover {
+  color: rgb(49, 49, 49);
+}
+header nav ul .active {
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+}
+.nav-down {
+  background-color: rgb(49, 49, 49);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+header nav .li-down {
+  color: whitesmoke !important;
+}
+header nav.nav-down ul li a.active.li-down {
+  color: rgb(243, 151, 64) !important;
+}
+header nav.nav-down ul li a.li-down:hover {
+  color: rgb(243, 151, 64) !important;
+}
+header nav .nav-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  font-size: 25px;
+  line-height: 5rem;
+  transform: rotate(180deg);
+  color: rgb(49, 49, 49);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: -10;
+}
+header nav .nav-btn.nav-btn-color {
+  color: whitesmoke;
+  transform: rotate(0deg) !important;
+}
+/* Main Style */
+main {
+  display: flex;
+  flex-direction: column;
+}
+/* Landing page style */
+main .landing-page {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(255, 182, 86);
+}
+main .landing-page .landing-static {
+  height: 100vh;
+  position: relative;
+}
+main .landing-page .landing-static img {
+  position: absolute;
+  width: 30vw;
+  right: 2vw;
+  top: 10vh;
+}
+main .landing-page .landing-static .text {
+  position: absolute;
+  top: 35vh;
+  left: 25vw;
+  width: 40vw;
+}
+main .landing-page .landing-static .text h1 {
+  color: rgb(49, 49, 49);
+  font-family: "Roboto", sans-serif;
+  font-size: 70px;
+}
+main .landing-page .landing-static .text p {
+  color: rgb(89, 89, 89);
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+}
+main .landing-page .landing-dinamis img {
+  width: 100vw;
+  height: 105vh;
+  position: absolute;
+  bottom: -13vh;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.colum {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Content style */
+main .row .content {
+  flex-basis: 70%;
+  padding: 4vw;
+  margin-top: 20vh;
+}
+/* Aside style */
+main .row aside {
+  height: 100vh;
+  margin-top: 20vh;
+  flex-basis: 30%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Card style */
+.card {
+  background-color: rgb(49, 49, 49);
+  padding: 2rem 1rem;
+  margin: 2rem 0 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow: auto;
+  overflow: auto;
+  text-align: justify;
+  transition: 0.5s;
+}
+.card h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: white;
+}
+.card .parag p {
+  text-indent: 20px;
+  font-size: 18px;
+}
+.card img {
+  height: 250px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  float: left;
+  cursor: pointer;
+}
+.button {
+  height: 45px;
+  width: 110px;
+  border-radius: 30px;
+  background-color: rgb(243, 151, 64);
+  cursor: pointer;
+  margin-top: 1rem;
+  color: black;
+  border: 0;
+  transition: 0.2;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background-color: rgb(248, 198, 91);
+  font-weight: bold;
+}
+/* Profile Card Style */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem 2rem 3rem;
+  justify-self: center;
+}
+.profile-card h2 {
+  font-size: 22px;
+  text-align: center;
+}
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  color: black;
+  border-radius: 50%;
+  border: 4px solid rgb(243, 151, 64);
+  margin-bottom: 2rem;
+}
+.profile-card q {
+  width: 200px;
+  text-align: center;
+  margin: 1rem 0 2rem;
+  font-size: 14px;
+}
+.profile-card ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.profile-card ul li {
+  list-style-type: none;
+}
+.profile-card ul li a img {
+  width: 35px;
+  height: 35px;
+  border-radius: 30%;
+  border: 0;
+  margin: 10px;
+}
+.profile-card ul li a img:hover {
+  background-color: rgb(245, 227, 146);
+}
+/* img show */
+.img-show {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.774);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -10;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5;
+}
+.img-show img {
+  height: 80%;
+}
+/* Footer style */
+footer {
+  background-color: rgb(49, 49, 49);
+  box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 2rem 0 5rem;
+}
+footer .footer-content .footer-input {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+footer .footer-content .footer-input p {
+  text-align: left;
+}
+footer .footer-content .footer-input input {
+  padding: 20px;
+  height: 45px;
+  width: 250px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+input {
+  outline: 0;
+  border: 0;
+}
+input:focus {
+  outline: 0;
+}
+footer .footer-content table {
+  flex-grow: 2;
+}
+footer .footer-content table tr {
+  height: 25px;
+}
+footer .footer-content table th {
+  text-align: left;
+  color: rgb(243, 151, 64);
+}
+footer .footer-content table a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+footer .footer-content table a:hover {
+  color: rgb(243, 151, 64);
+}
+footer p {
+  text-align: center;
+}
+/* responsive */
+@media screen and (max-width: 700px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+  }
+  header.header-focus {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+  }
+  header nav {
+    flex-direction: column;
+    max-height: 4rem;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  header nav.nav-res {
+    max-height: 30rem !important;
+    background-color: rgb(49, 49, 49);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  header nav.nav-res a {
+    color: whitesmoke;
+  }
+  header nav ul .active.nav-res a {
+    color: white;
+  }
+  header nav .nav-reshover a {
+    color: rgb(243, 151, 64);
+  }
+  header nav .icon {
+    flex-grow: unset;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    margin-top: 10vh;
+  }
+  header nav ul li {
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    justify-items: center;
+  }
+  header nav .nav-btn {
+    opacity: 1;
+    z-index: 9;
+  }
+  main .row {
+    flex-direction: column;
+  }
+  main .landing-page .landing-static .text {
+    top: 30vh;
+    left: 22vw;
+    width: 70%;
+  }
+  main .landing-page .landing-static .text h1 {
+    font-size: 50px;
+  }
+  main .landing-page .landing-dinamis img {
+    height: 90vh;
+    width: 120vh;
+  }
+  main .landing-page .landing-static img {
+    width: 70vw;
+    top: 5vh;
+    right: -30vw;
+  }
+  main .row .content .card {
+    flex-direction: column;
+  }
+  main .row .content .card img {
+    width: 100%;
+    height: unset !important;
+    margin-bottom: 1rem;
+  }
+  main aside {
+    height: unset !important;
+    margin-top: 0 !important;
+  }
+  main .content {
+    padding: 0 1rem;
+    margin-top: 15vh !important;
+  }
+  main aside {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+  .card {
+    margin: 1rem 0 0 0;
+    border-radius: 10px;
+  }
+  .profile-card {
+    justify-self: unset;
+  }
+  .img-show img {
+    height: unset !important;
+    width: 100%;
+  }
+  footer .footer-content {
+    flex-direction: column;
+  }
+  footer .footer-content .footer-input {
+    margin-left: unset;
+    margin-bottom: 3rem;
+  }
+  footer .footer-content .footer-input input {
+    width: 60%;
+  }
+}
